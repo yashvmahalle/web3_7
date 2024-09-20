@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images with Picture Element</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Responsive Images Using the Picture Element</h1>
+
+    <picture>
+        <!-- Image for large screens -->
+        <source srcset="images/large.jpg" media="(min-width: 1200px)">
+        
+        <!-- Image for medium screens -->
+        <source srcset="images/medium.jpg" media="(min-width: 768px)">
+        
+        <!-- Image for high-resolution screens -->
+        <source srcset="images/small.jpg" media="(min-width: 320px)">
+        
+        <!-- Fallback image for browsers that don't support the picture element -->
+        <img src="images/fallback.jpg" alt="Responsive image example">
+    </picture>
+
+    <p>This is an example of how the <code>&lt;picture&gt;</code> element can be used to serve different image sources based on screen size and resolution.</p>
+
+</body>
+</html>
